@@ -9,3 +9,5 @@ Description: The tools in this pacakge help me to use Copernicus weather data
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/j3lps/CopernicusWeather
+BugReports: https://github.com/j3lps/CopernicusWeather/issues
