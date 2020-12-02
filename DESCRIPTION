@@ -1,11 +1,11 @@
 Package: CopernicusWeather
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Tools for using weather data from Copnericus weather satellite
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Joe Helps
+Maintainer: Joe Helps <yourself@somewhere.net>
+Description: The tools in this pacakge help me to use Copernicus weather data
+    Tools include downloading required weather, and pulling out daily or hourly weather for a site
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
