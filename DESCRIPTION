@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Joe Helps
 Maintainer: Joe Helps <joe.helps@rothamsted.ac.uk>
 Description: The tools in this pacakge help me to use Copernicus weather data
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/j3lps/CopernicusWeather
@@ -14,3 +14,4 @@ Depends:
     R (>= 2.10)
 Imports: 
     ncdf4
+RoxygenNote: 7.1.1

@@ -125,7 +125,7 @@ getWeatherYear<-function(longitude,latitude,year,variables=NA){
     DF$RH = 100*exp(17.625 * DF$DewPointTemp / (243.04 + DF$DewPointTemp))/exp(17.625 * DF$Temperature / (243.04 + DF$Temperature))
 
     # Close the file
-    nc_close(netCDFData)
+    ncdf4::nc_close(netCDFData)
 
     # Return the weather data.frame
     return(DF)
