@@ -25,7 +25,7 @@
 #' @export
 #'
 #' @examples
-getWeather<-function(longitude,latitude,timefrom,timeto,unit="hour",variables=NA){
+getWeather<-function(latitude,longitude,timefrom,timeto,unit="hour",variables=NA){
 
     # Check the format of timefrom and timeto
     if(!(class(timefrom) %in% c("POSIXct", "POSIXlt","Date"))) stop("timefrom needs to be a date (either POSIXct, POSIXlt or Date format)")
@@ -61,7 +61,7 @@ getWeather<-function(longitude,latitude,timefrom,timeto,unit="hour",variables=NA
 }
 
 # A function to provide the weather that is closest to the given longitude, latitude and start and end dates (from downloaded weather data)
-getWeatherYear<-function(longitude,latitude,year,variables=NA){
+getWeatherYear<-function(latitude,longitude,year,variables=NA){
 
     # Print a warning if the variables supplied are not in the weather data, then stop and send a warning
     if(!is.na(variables)) if(any(!(variables %in% names(DATASET.summary)))) stop(paste("No variables found of that name. Possible variables are:",names(DATASET.summary)[-(1:4)]))
@@ -77,7 +77,7 @@ getWeatherYear<-function(longitude,latitude,year,variables=NA){
     if(nrow(cutDATASET) == 0) stop("Can't find any weather data with the specified variables in the given year")
 
     # Get the closest weather datapoint
-    distance = grandCircleDistance(longitude,latitude,cutDATASET$Longitude,cutDATASET$Latitude)
+    distance = calculateDistance(latitude,cutDATASET$Latitude,longitude,cutDATASET$Longitude)
 
     # Find the closest weather station
     whichSite = which.min(distance)
